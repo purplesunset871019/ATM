@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         ed_password = findViewById(R.id.ed_password);
         username = ed_username.getText().toString();
         password = ed_password.getText().toString();
-        if("Steven".equals(username) && "123456789".equals(password)){
+        if("Frank ".equals(username) && "123456789".equals(password)){
             finish();
         }
     }
