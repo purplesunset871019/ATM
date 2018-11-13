@@ -36,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
                     .edit()
                     .putString("USERNAME",username)
                     .apply();
+            setResult(RESULT_OK);
             finish();
         }
 

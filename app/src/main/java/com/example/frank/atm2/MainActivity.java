@@ -21,9 +21,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == 100){
+        if(requestCode == RC_LOGIN){
             if(resultCode!= RESULT_OK){
                 finish();
+            }
+
+            else{
+                Intent nickname = new Intent(this,NicknameActivity.class);
+                startActivity(nickname);
             }
         }
     }
