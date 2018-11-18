@@ -1,5 +1,6 @@
 package com.example.frank.atm2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,5 +21,8 @@ public class NicknameActivity extends AppCompatActivity {
                 .edit()
                 .putString("NICKNAME",nickname)
                 .apply();
+
+        Intent age = new Intent(this, AgeActivity.class);
+        startActivity(age);
     }
 }
