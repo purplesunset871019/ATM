@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class GenderActivity extends AppCompatActivity {
+public class GenderActivity extends BaseActivity {
 
     private EditText ed_gender;
     private String gender;
@@ -21,12 +21,7 @@ public class GenderActivity extends AppCompatActivity {
     public void next(View view){
         ed_gender = findViewById(R.id.ed_gender);
         gender = ed_gender.getText().toString();
-        getSharedPreferences("atm",MODE_PRIVATE)
-                .edit()
-                .putString("GENDER",gender)
-                .apply();
-        setResult(RESULT_OK);
-
+        user.setGender(gender);
         Intent main = new Intent(this, MainActivity.class);
         setResult(RESULT_OK);
         main.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
