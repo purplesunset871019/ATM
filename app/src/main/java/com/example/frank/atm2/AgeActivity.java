@@ -21,10 +21,10 @@ public class AgeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_age);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        //TODO: set adpter
+        RecyclerView ageRecycler = findViewById(R.id.recycler);
+        ageRecycler.setHasFixedSize(true);
+        ageRecycler.setLayoutManager(new LinearLayoutManager(this));
+        ageRecycler.setAdapter(new AgeAdapter());
     }
 
     public void next(View view){
